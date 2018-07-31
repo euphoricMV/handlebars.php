@@ -72,9 +72,7 @@ class EachHelper implements Helper
                     '@first' => ($index === 0),
                     '@last' => ($index === $lastIndex),
                 );
-                if (!$isList) {
-                    $specialVariables['@key'] = $key;
-                }
+                $specialVariables['@key'] = $key;
                 $context->pushSpecialVariables($specialVariables);
                 $context->push($var);
                 $template->setStopToken('else');
